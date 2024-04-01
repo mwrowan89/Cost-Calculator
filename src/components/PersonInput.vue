@@ -1,4 +1,3 @@
-// PersonInput.vue
 <template>
   <div>
     <input v-model="personName" type="text" placeholder="Person's Name">
