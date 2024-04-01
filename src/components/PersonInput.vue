@@ -15,7 +15,7 @@ export default {
   methods: {
     addPerson() {
       if (this.personName.trim() !== '') {
-        this.$emit('add-person', this.personName);
+        this.$emit('add-person', this.personName.trim());
         this.personName = '';
       }
     }
