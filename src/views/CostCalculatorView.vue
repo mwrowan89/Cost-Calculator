@@ -40,22 +40,12 @@ export default {
         this.people.push(personName.trim());
       }
     },
-    // addPerson(personName) {
-    //   // Check if the personName is not already in the people array
-    //   if (!this.people.some(person => person.name === personName.trim())) {
-    //     // Push a new object representing the person to the people array
-    //     this.people.push({ name: personName.trim(), selected: false });
-    //   }
-    // },
     addExpense(expenseName, amount, participants) {
-      // participants = participants || [];
       this.expenses.push({ expense: expenseName, amount, participants });
       console.log(expenseName, amount, participants)
     },
     removePerson(index) {
       const removedPerson = this.people[index];
-
-      // Remove the person from the people list
       this.people.splice(index, 1);
 
       this.expenses.forEach(expense => {
@@ -84,6 +74,9 @@ export default {
         }
       });
 
+      for (const person in totalOwed) {
+        totalOwed[person] = Number(totalOwed[person].toFixed(2));
+      }
       console.log(totalOwed)
 
       return totalOwed;
