@@ -17,7 +17,7 @@ export default {
     return {
       expenseName: '',
       amount: 0,
-      participants: ''
+      participantsInput: ''
     }
   },
   methods: {
