@@ -1,16 +1,16 @@
 <template>
   <div>
-    <person-list :people="people" @remove-person="removePerson"></person-list>
-    <expense-list :expenses="expenses" @remove-expense="removeExpense"></expense-list>
-    <div>
-      <h2>Total Owed</h2>
-      <ul>
-        <li v-for="(amountOwed, person) in calculateTotalOwed" :key="person">
+    <person-input @add-person="addPerson"></person-input>
+    <person-list class="people" :people="people" @remove-person="removePerson"></person-list>
+    <expense-list class="expenses" :expenses="expenses" @remove-expense="removeExpense"></expense-list>
+    <div class="total-owed">
+      <h2>Total Owed:</h2>
+      <ul class="total-owed-ul">
+        <li class="total-owed-li" v-for="(amountOwed, person) in calculateTotalOwed" :key="person">
           {{ person }}: ${{ amountOwed }}
         </li>
       </ul>
     </div>
-    <person-input @add-person="addPerson"></person-input>
     <expense-input :people="people" @add-expense="addExpense"></expense-input>
   </div>
 </template>
@@ -84,4 +84,37 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.total-owed-ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.total-owed-li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.people,
+.expenses,
+.total-owed {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  max-width: 75vw;
+  width: 75vh;
+}
+
+.people {
+  width: 75vh;
+  max-width: 60vw;
+}
+</style>
   
