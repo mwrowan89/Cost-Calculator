@@ -42,7 +42,6 @@ export default {
 }
 
 .button {
-  height: 3vh;
-  width: 5vw;
+  scale: 80%;
 }
 </style>

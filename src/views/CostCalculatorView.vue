@@ -42,7 +42,6 @@ export default {
     },
     addExpense(expenseName, amount, participants) {
       this.expenses.push({ expense: expenseName, amount, participants });
-      console.log(expenseName, amount, participants)
     },
     removePerson(index) {
       const removedPerson = this.people[index];
@@ -66,7 +65,6 @@ export default {
       this.expenses.forEach(expense => {
         const { amount, participants } = expense;
         if (participants && participants.length > 0) {
-          console.log(participants);
           const share = amount / participants.length;
           participants.forEach(person => {
             totalOwed[person] += share;
@@ -77,8 +75,6 @@ export default {
       for (const person in totalOwed) {
         totalOwed[person] = Number(totalOwed[person].toFixed(2));
       }
-      console.log(totalOwed)
-
       return totalOwed;
     }
   }
@@ -86,19 +82,6 @@ export default {
 </script>
 
 <style scoped>
-.total-owed-ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  justify-content: space-around;
-}
-
-.total-owed-li {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
 .people,
 .expenses,
 .total-owed {
@@ -115,6 +98,19 @@ export default {
 .people {
   width: 75vh;
   max-width: 60vw;
+}
+
+.total-owed-li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.total-owed-ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-around;
 }
 </style>
   
