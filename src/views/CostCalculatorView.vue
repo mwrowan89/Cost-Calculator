@@ -1,7 +1,5 @@
 <template>
   <div>
-    <person-input @add-person="addPerson"></person-input>
-    <expense-input :people="people" @add-expense="addExpense"></expense-input>
     <person-list :people="people" @remove-person="removePerson"></person-list>
     <expense-list :expenses="expenses" @remove-expense="removeExpense"></expense-list>
     <div>
@@ -12,6 +10,8 @@
         </li>
       </ul>
     </div>
+    <person-input @add-person="addPerson"></person-input>
+    <expense-input :people="people" @add-expense="addExpense"></expense-input>
   </div>
 </template>
   
