@@ -14,10 +14,6 @@
       </nav>
     </div>
   </header>
-  <main>
-    <CostCalculatorView />
-  </main>
-
   <RouterView />
 </template>
 
