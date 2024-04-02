@@ -24,22 +24,21 @@ export default {
 <style scoped>
 .people-input {
   display: flex;
-  align-items: center;
-  width: 20vw;
+  width: 75vw;
 }
 
 .list {
   display: flex;
+  flex-wrap: wrap;
   font-size: 1.1rem;
   list-style: none;
-  justify-content: center;
 }
 
 .items {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .button {

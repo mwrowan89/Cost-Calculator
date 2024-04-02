@@ -1,6 +1,6 @@
 <template>
   <div class="expense-input">
-    <h2>Expenses</h2>
+    <h2>Expenses:</h2>
     <ul>
       <li v-for="(expense, index) in expenses" :key="index">
         <strong>{{ expense.expenseName }}</strong>: ${{ expense.amount }}
@@ -23,5 +23,9 @@ export default {
   }
 }
 </script>
-
-<style scoped></style>
+<style scoped>
+.expense-input {
+  display: flex;
+  flex-direction: column;
+}
+</style>

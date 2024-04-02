@@ -1,5 +1,5 @@
 <template>
-  <div class="input">
+  <div class="person-input">
     <input v-model="personName" type="text" placeholder="Person's Name">
     <button @click="addPerson">Add Person</button>
   </div>
@@ -24,9 +24,11 @@ export default {
 </script>
 
 <style scoped>
-.input {
+.person-input {
+  scale: 150%;
   display: flex;
-  flex-direction: column;
-  width: 20vw;
+  justify-content: center;
+  align-items: center;
+  margin: 20px
 }
 </style>
