@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <person-input @add-person="addPerson"></person-input>
+  <div class="display">
+    <person-input class="addPerson" @add-person="addPerson"></person-input>
     <person-list class="people" :people="people" @remove-person="removePerson"></person-list>
     <expense-list class="expenses" :expenses="expenses" @remove-expense="removeExpense"></expense-list>
     <div class="total-owed">
@@ -82,9 +82,8 @@ export default {
 </script>
 
 <style scoped>
-.people,
-.expenses,
-.total-owed {
+
+.display{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

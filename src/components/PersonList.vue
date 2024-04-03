@@ -22,9 +22,12 @@ export default {
 </script>
 
 <style scoped>
-.people-input {
+/* .people-input {
   display: flex;
-}
+  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--color-border);
+
+} */
 
 .list {
   display: flex;

@@ -4,7 +4,7 @@
     <input v-model.number="amount" type="number" placeholder="Amount">
     <input v-model="participantsInput" type="text" placeholder="Participants">
     <button @click="addExpense">Add Expense</button>
-    <br>
+    <br><br>
     <div class="selectAll">
       <input type="checkbox" v-model="selectAll" @change="toggleSelectAll">
     <label>Select All</label>
@@ -65,5 +65,12 @@ export default {
   flex-wrap: wrap;
   margin: 5px;
 
+}
+
+.selectAll {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 </style>

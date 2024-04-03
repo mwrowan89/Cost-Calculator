@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 .person-input {
-  scale: 150%;
+  scale: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
