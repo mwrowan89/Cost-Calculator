@@ -3,7 +3,7 @@
     <h2>Expenses:</h2>
     <ol class="expense-list">
       <li v-for="(expense, index) in expenses" :key="index">
-        <strong>{{ expense.expenseName }}</strong> ${{ expense.amount }}
+        <strong>{{ expense.expense }}</strong> ${{ expense.amount }}
         <span v-if="expense.participants.length > 0">
           (Participants: {{ expense.participants.join(', ') }})
         </span>
@@ -20,6 +20,9 @@ export default {
     removeExpense(index) {
       this.$emit('remove-expense', index);
     }
+  },
+  mounted() {
+    console.log(this.expenses);
   }
 }
 </script>
