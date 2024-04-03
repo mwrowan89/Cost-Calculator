@@ -83,22 +83,39 @@ export default {
 
 <style scoped>
 
-.display{
+
+.addPerson,
+.people,
+.expenses,
+.total-owed {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   border: 2px solid white;
+  border-radius: 5px;
   max-width: 75vw;
   width: 75vh;
   padding: 20px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.expenses {
+  align-items: flex-start;
 }
 
 .total-owed-li {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 5px;
 }
 
 .total-owed-ul {

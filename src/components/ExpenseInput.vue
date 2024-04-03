@@ -2,7 +2,7 @@
   <div>
     <input v-model="expenseName" type="text" placeholder="Expense Name">
     <input v-model.number="amount" type="number" placeholder="Amount">
-    <input v-model="participantsInput" type="text" placeholder="Participants">
+    <!-- <input v-model="participantsInput" type="text" placeholder="Participants"> -->
     <button @click="addExpense">Add Expense</button>
     <br><br>
     <div class="selectAll">
