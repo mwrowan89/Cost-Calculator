@@ -3,7 +3,7 @@
     <h2>People:</h2>
     <ul class="list">
       <li class="items" v-for="(person, index) in people" :key="index">
-        {{ person }}
+        {{ person }} 
         <button class="button" @click="removePerson(index)">Remove</button>
       </li>
     </ul>
@@ -12,7 +12,7 @@
   
 <script>
 export default {
-  props: ['people'],
+  props: ['people', 'expenses'],
   methods: {
     removePerson(index) {
       this.$emit('remove-person', index);
@@ -22,13 +22,6 @@ export default {
 </script>
 
 <style scoped>
-/* .people-input {
-  display: flex;
-  border-bottom: 2px solid white;
-  border-bottom: 2px solid var(--color-border);
-
-} */
-
 .list {
   display: flex;
   flex-wrap: wrap;

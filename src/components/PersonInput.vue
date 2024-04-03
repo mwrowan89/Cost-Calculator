@@ -9,7 +9,8 @@
 export default {
   data() {
     return {
-      personName: ''
+      personName: '',
+      daysInvolved: 0
     }
   },
   methods: {
@@ -17,6 +18,7 @@ export default {
       if (this.personName.trim() !== '') {
         this.$emit('add-person', this.personName.trim());
         this.personName = '';
+        this.daysInvolved = 0;
       }
     }
   }
