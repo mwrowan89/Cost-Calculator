@@ -24,7 +24,6 @@ export default {
 <style scoped>
 .people-input {
   display: flex;
-  width: 75vw;
 }
 
 .list {

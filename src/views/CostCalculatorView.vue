@@ -93,11 +93,7 @@ export default {
   border: 2px solid white;
   max-width: 75vw;
   width: 75vh;
-}
-
-.people {
-  width: 75vh;
-  max-width: 60vw;
+  padding: 20px;
 }
 
 .total-owed-li {
